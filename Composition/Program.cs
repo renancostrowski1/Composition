@@ -8,6 +8,7 @@ namespace Composition
     {
         static void Main(string[] args)
         {
+            // Interação com o Usuário
             Console.Write("Enter department's name: ");
             string dptName = Console.ReadLine();
             Console.WriteLine("Enter worker data: ");
