@@ -8,7 +8,7 @@ namespace Composition
     {
         static void Main(string[] args)
         {
-            // Interação com o Usuário
+            // User interaction
             Console.Write("Enter department's name: ");
             string dptName = Console.ReadLine();
             Console.WriteLine("Enter worker data: ");
@@ -20,12 +20,15 @@ namespace Composition
             double basesalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine();
 
+            // Instantiating Department and Worker
             Department dpt = new Department(dptName);
             Worker worker = new Worker(name, level, basesalary, dpt);
 
+            //Number of contracts
             Console.Write("How many contracts to this worker? ");
             int n = int.Parse(Console.ReadLine());
 
+            // reading contracts
             for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine("Enter #" + i + " contract data: ");
@@ -40,6 +43,7 @@ namespace Composition
             }
             Console.WriteLine();
 
+            // Month and year to be calculated income
             Console.Write("Enter month and year to calculate income (MM/YYYY): ");
             Console.WriteLine();
             DateTime dateincome = DateTime.Parse(Console.ReadLine());
